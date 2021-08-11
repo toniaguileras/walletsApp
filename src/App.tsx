@@ -1,18 +1,20 @@
-import { Contador } from "./components/Contador"
+import { Usuarios } from "./components/Usuarios";
 
- const App = () => {
+const App = () => {
   return (
     <div className="mt-2">
       <h1>Introduccion a React Native</h1>
-      <hr/>
+      <hr />
       {/*<TiposBasicos/>
       <hr/>
       <ObjetosLiterales/>
       <hr/>
-      <Funciones/>*/}
+      <Funciones/>
       <Contador/>
+      <Login/>*/}
+      <Usuarios />
     </div>
-  )
-}
+  );
+};
 
 export default App;
