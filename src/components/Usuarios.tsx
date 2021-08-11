@@ -1,11 +1,13 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { reqResApi } from "../api/reqRes";
+import { ReqResListado } from "../interfaces/reqRes";
 
 export const Usuarios = () => {
+  const [usuario, setUsuario] = useState([]);
   useEffect(() => {
     //llamada a la api
     reqResApi
-      .get("/users")
+      .get<ReqResListado>("/users")
       .then((resp) => {
         console.log(resp.data.data);
       })
